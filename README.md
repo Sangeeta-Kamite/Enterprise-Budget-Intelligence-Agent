@@ -1,8 +1,8 @@
-#Enterprise Budget Intelligence Agent
+# Enterprise Budget Intelligence Agent
 
 A Multi-Agent System for Automated Financial Variance & Anomaly Analysis Using Google ADK + Gemini
 
-🧠 Overview
+## 🧠 Overview
 
 The Enterprise Budget Intelligence Agent is a multi-agent financial analysis system built using the Google AI Agent Development Kit (ADK).
 It automatically:
@@ -16,7 +16,7 @@ It automatically:
 - Produces an executive-ready financial report
 This project transforms the monthly financial review into a fully automated, AI-driven workflow.
 
-🚨 Problem Statement
+## 🚨 Problem Statement
 
 Enterprises handle large amounts of budget vs. actual data every month.
 Analyzing department-wise performance requires:
@@ -27,7 +27,7 @@ Analyzing department-wise performance requires:
 - generating executive reports
 This is slow, labor-intensive, error-prone, and difficult at scale.
 
-#The challenge:
+### The challenge:
 
 “How can we automate financial analysis reliably and generate high-quality insights consistently?”
 
@@ -37,42 +37,35 @@ This project uses multiple LLM-powered agents—each specializing in one part of
 
 ✔ Multi-Agent Architecture
 
-root_agent – Orchestrates the workflow
-
-data_prep_agent – Loads dataset & identifies periods
-
-analysis_agent – Computes variances & detects anomalies
-
-reporting_agent – Generates executive-ready report
-
-evaluation_agent – Measures anomaly detection model quality
+- root_agent – Orchestrates the workflow
+- data_prep_agent – Loads dataset & identifies periods
+- analysis_agent – Computes variances & detects anomalies
+- reporting_agent – Generates executive-ready report
+- evaluation_agent – Measures anomaly detection model quality
 
 ✔ Custom Tools
 
-compute_variance
-
-detect_anomalies
-
-summarize_history
-
-save_run_summary (memory)
-
-log_event (logging)
-
-evaluate_anomaly_detector (agent evaluation)
+- compute_variance
+- detect_anomalies
+- summarize_history
+- save_run_summary (memory)
+- log_event (logging)
+- evaluate_anomaly_detector (agent evaluation)
 
 ✔ Memory
 
-Stores summaries for each analyzed period
-
-Used for trend reporting in subsequent runs
+- Stores summaries for each analyzed period
+- Used for trend reporting in subsequent runs
 
 ✔ Observability
 
-Full structured logs available via get_logs()
-
+- Full structured logs available via get_logs()
+  
 ✔ Evaluation
 
-Precision / Recall / F1 for anomaly detection
+- Precision / Recall / F1 for anomaly detection
+
+## 🏗️ Architecture Diagram
+
 
 🏗️ Architecture Diagram
