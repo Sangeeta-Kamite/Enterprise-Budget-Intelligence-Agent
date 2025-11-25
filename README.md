@@ -1,3 +1,5 @@
+![Title-Thumbnail](images/Title-Thumbnail-main.png)
+
 # Enterprise Budget Intelligence Agent
 
 A Multi-Agent System for Automated Financial Variance & Anomaly Analysis Using Google ADK + Gemini
@@ -69,7 +71,7 @@ This project uses multiple LLM-powered agents—each specializing in one part of
 
 🏗️ Architecture Diagram
 
-![ETL Data Flow Diagram](docs/ETL_dag_Flow.jpg)
+
 
 ## 🧩 Features Implemented (Capstone Requirements)
 
