@@ -163,4 +163,23 @@ The Enterprise Budget Intelligence workflow is shown in the diagram and works as
 - Precision, recall, F1 scoring
 - Interpreted by evaluation agent
 
+## 🧪 Evaluation (Precision / Recall / F1)
+
+The project includes a complete evaluation pipeline:
+- Ground truth anomalies = variance ≥ 20%
+- Predicted anomalies = variance ≥ 15%
+Computes: TP, FP, FN, TN, Precision, Recall, F1
+Evaluated by evaluation_agent.
+
+## 🧠 Why This Matters
+
+Organizations can adopt this system to:
+- Automate monthly financial reviews
+- Detect hidden budget issues
+- Standardize reporting
+- Improve executive decision-making
+- Reduce manual analyst workload
+
+This represents a modern AI-native finance workflow.
+
 
