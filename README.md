@@ -67,8 +67,9 @@ This project uses multiple LLM-powered agents—each specializing in one part of
 
 ## 🏗️ Architecture Diagram
 
-
 🏗️ Architecture Diagram
+
+![ETL Data Flow Diagram](docs/ETL_dag_Flow.jpg)
 
 ## 🧩 Features Implemented (Capstone Requirements)
 
