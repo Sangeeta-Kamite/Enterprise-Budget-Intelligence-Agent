@@ -69,3 +69,34 @@ This project uses multiple LLM-powered agents—each specializing in one part of
 
 
 🏗️ Architecture Diagram
+
+## 🧩 Features Implemented (Capstone Requirements)
+
+ 🎯 1. Multi-Agent System
+
+- 5 specialized LLM agents
+- Clear sequential orchestration
+- Agent-to-agent delegation
+
+ 🎯 2. Tools
+
+- 10+ custom tools
+- Data loading, variance computation, anomaly detection
+- Memory, logging, evaluation tools
+
+ 🎯 3. Memory
+
+- Long-term memory via save_run_summary
+- Trends used by reporting agent
+
+ 🎯 4. Observability
+
+- Structured logs (log_event)
+- Logs retrieved via get_logs()
+
+ 🎯 5. Agent Evaluation
+
+- Precision, recall, F1 scoring
+- Interpreted by evaluation agent
+
+
