@@ -69,7 +69,7 @@ This project uses multiple LLM-powered agents—each specializing in one part of
 
 ## 🏗️ Architecture Diagram
 
-![Architecture](images/Architecture.png)
+![architecture](images/architecture.png)
 
 ## 🧩 Features Implemented (Capstone Requirements)
 
