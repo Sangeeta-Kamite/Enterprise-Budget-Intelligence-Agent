@@ -72,9 +72,11 @@ This project uses multiple LLM-powered agents—each specializing in one part of
 ![architecture](images/architecture.png)
 
 .
-## 🧭 Workflow Overview (Architecture Diagram)
+## 🧭 Workflow Overview
 
-The Enterprise Budget Intelligence workflow is shown in the architecture diagram and works as follows:
+![workflow](images/workflow.png)
+
+The Enterprise Budget Intelligence workflow is shown in the diagram and works as follows:
 
 1. User → Root Multi-agent Orchestrator
 
