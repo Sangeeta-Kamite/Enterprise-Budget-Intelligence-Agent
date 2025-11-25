@@ -71,6 +71,67 @@ This project uses multiple LLM-powered agents—each specializing in one part of
 
 ![architecture](images/architecture.png)
 
+.
+## 🧭 Workflow Overview (Architecture Diagram)
+
+The Enterprise Budget Intelligence workflow is shown in the architecture diagram and works as follows:
+
+1. User → Root Multi-agent Orchestrator
+
+- A finance user starts in the ADK Web UI or CLI and asks a question such as:
+“Give me an executive budget report for December 2024.”
+- The request is sent to the Root Multi-agent Orchestrator, an LLM agent powered by Gemini (Google AI).
+
+2. Orchestrator → Data Prep Agent
+
+- The orchestrator first delegates to the Data Prep Agent.
+- This agent uses the load_budget_data tool to:
+  - Load the CSV data (enterprise_budget_data.csv)
+  - Discover which periods and departments exist
+- It may log this step using log_event and sends the cleaned context back to the orchestrator.
+
+3. Orchestrator → Analysis Agent
+
+- Next, the orchestrator calls the Analysis Agent with the selected period (for ex, 2024-12).
+- The Analysis Agent uses:
+  - compute_variance to calculate budget vs actual for each department/category
+  - detect_anomalies to find major over- and under-spends
+- It then calls save_run_summary, which writes a run summary into Memory, and logs key steps via log_event.
+
+4. Memory Layer (Logs + Local Data + Run History)
+
+- Local Data: original CSV, accessed via _load_df() and tools
+- Run History: period summaries stored by save_run_summary
+- Logs: structured log entries written by log_event
+- This layer is the shared “state” that agents can read from to keep context over time.
+
+5. Orchestrator → Reporting Agent
+
+- With analysis complete and memory updated, the orchestrator delegates to the Reporting Agent.
+- The Reporting Agent uses:
+  - summarize_history to see recent trends
+  - get_run_history to compare current period vs past periods
+  - get_logs to reference important steps and anomalies
+- It then composes the EXECUTIVE BUDGET REPORT with sections:
+  - Overview
+  - Key Variance Drivers
+  - Department Highlights
+  - Risks & Opportunities
+  - Recommended Follow-up Actions
+
+6. Optional: Orchestrator → Evaluation Agent
+
+- If the user asks things like “How good is the anomaly detector?”,the orchestrator calls the Evaluation Agent.
+- This agent uses evaluate_anomaly_detector to compute precision, recall, and F1, and returns an explanation of model quality.
+
+7. Final Output → User
+
+- The orchestrator returns the final EXECUTIVE BUDGET REPORT (final output) to the user in the ADK UI.
+- The report is grounded in:
+   - tool outputs (numerical analysis),
+   - memory (run history), and
+   - logs (for transparency).
+
 ## 🧩 Features Implemented (Capstone Requirements)
 
  🎯 1. Multi-Agent System
